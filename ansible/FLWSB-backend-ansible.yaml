@@ -12,7 +12,7 @@
 # -K -> ask become password (root)
     - name: Update apt cache
       ansible.builtin.apt:
-         update_cache: true
+        update_cache: true
       become: true
 
     - name: Install packages
@@ -23,10 +23,10 @@
           - gnupg
           - lsb-release
           - pip
-          - nginx
           - certbot
           - python3-certbot-nginx
         state: present
+        become: true
 
     - name: Add Docker's GPG key
       ansible.builtin.apt_key:
