@@ -10,7 +10,7 @@ services:
       - API_USER
       - API_PASSWD
     volumes:
-      - ./Nginx/error.log:/etc/nginx/error_log.log:rw
+      - ./nginx/error.log:/etc/nginx/error_log.log:rw
       - /etc/letsencrypt/:/etc/letsencrypt/:ro
     ports:
       - 80:80
