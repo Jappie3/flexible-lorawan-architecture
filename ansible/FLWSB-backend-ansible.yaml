@@ -1,6 +1,6 @@
 ---
 - name: Hetzner server for FLWSB backend
-  hosts: FLWSB-hetzner
+  hosts: FLWSB_hetzner
   user: '{{ user }}'
   vars:
     domains:
@@ -78,7 +78,7 @@
     - name: Clone git repo
       ansible.builtin.git:
         repo: "https://github.com/jappie3/flexible-lorawan-architecture"
-        version: LATEST #
+        # version: LATEST
         dest: ~/flexible-lorawan-architecture/
         force: true # overwrite existing repo (with possibly changes)
 
